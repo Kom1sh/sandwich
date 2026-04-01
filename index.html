@@ -3,7 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>THE SANDWICH — Легенда вкуса</title>
+
+  <!-- ── PRIMARY SEO ── -->
+  <title>THE SANDWICH — Бутерброд с колбасой и сыром | Легенда вкуса с 1947 года</title>
+  <meta name="description" content="THE SANDWICH — культовый бутерброд с докторской колбасой и полутвёрдым сыром на поджаренном батоне. Хрустящий, сочный, готов за 30 секунд. Легенда с 1947 года." />
+  <meta name="keywords" content="бутерброд с колбасой, бутерброд с сыром, докторская колбаса, бутерброд рецепт, the sandwich, вкусный бутерброд" />
+  <meta name="author" content="THE SANDWICH" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://thesandwich.ru/" />
+
+  <!-- ── OPEN GRAPH ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thesandwich.ru/" />
+  <meta property="og:title" content="THE SANDWICH — Бутерброд с колбасой и сыром" />
+  <meta property="og:description" content="Докторская колбаса, полутвёрдый сыр, хрустящий батон. Готов за 30 секунд. Легенда с 1947 года." />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:site_name" content="THE SANDWICH" />
+
+  <!-- ── TWITTER CARD ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="THE SANDWICH — Бутерброд с колбасой и сыром" />
+  <meta name="twitter:description" content="Докторская колбаса, полутвёрдый сыр, хрустящий батон. Легенда с 1947 года." />
+
+  <!-- ── STRUCTURED DATA ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "name": "THE SANDWICH",
+    "description": "Культовый бутерброд с докторской колбасой и полутвёрдым сыром на поджаренном батоне",
+    "foundingDate": "1947",
+    "servesCuisine": "Русская",
+    "menu": {
+      "@type": "Menu",
+      "hasMenuSection": {
+        "@type": "MenuSection",
+        "name": "Бутерброды",
+        "hasMenuItem": {
+          "@type": "MenuItem",
+          "name": "THE SANDWICH",
+          "description": "Поджаренный батон, листья салата, докторская колбаса, полутвёрдый сыр",
+          "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
+        }
+      }
+    }
+  }
+  </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;700;900&display=swap');
 
@@ -15,6 +60,10 @@
       --dark: #0d0d0d;
       --cream: #fff8e7;
     }
+
+    /* ── NO BLUE SELECTION ── */
+    ::selection { background: var(--yellow); color: var(--dark); }
+    ::-moz-selection { background: var(--yellow); color: var(--dark); }
 
     html { scroll-behavior: smooth; }
 
@@ -265,7 +314,7 @@
       opacity: .3;
     }
 
-    .layer-info h4 {
+    .layer-info h3 {
       font-family: 'Anton', sans-serif;
       font-size: 1.6rem;
       text-transform: uppercase;
@@ -332,6 +381,77 @@
     ::-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar-track { background: var(--dark); }
     ::-webkit-scrollbar-thumb { background: var(--yellow); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      /* Hide desktop cursor on touch */
+      .cursor { display: none; }
+
+      /* Hero */
+      #hero { padding: 5rem 1.2rem 3rem; min-height: 100svh; }
+
+      .hero-tag {
+        font-size: .75rem;
+        letter-spacing: .25em;
+        text-align: center;
+      }
+
+      h1 { font-size: clamp(4rem, 22vw, 7rem); }
+
+      .hero-sub {
+        font-size: .75rem;
+        letter-spacing: .08em;
+        text-align: center;
+        padding: 0 1rem;
+      }
+
+      /* Shrink SVG sandwich */
+      .sandwich-wrap svg {
+        width: 240px;
+        height: 165px;
+      }
+      .sandwich-wrap { margin: 2rem 0 1.5rem; }
+
+      /* CTA */
+      .cta-btn { padding: .85rem 2rem; font-size: 1rem; }
+
+      /* Marquee */
+      .marquee-track { gap: 2.5rem; }
+      .marquee-track span { font-size: .85rem; }
+
+      /* Features */
+      #features { padding: 4rem 1.2rem; }
+      .section-title { font-size: clamp(2rem, 10vw, 3rem); margin-bottom: 2.5rem; }
+      .section-label { font-size: .75rem; letter-spacing: .3em; }
+      .cards { grid-template-columns: 1fr; gap: 1px; }
+      .card { padding: 1.8rem 1.4rem; }
+      .card:hover { transform: none; }
+
+      /* Layers */
+      #layers { padding: 4rem 1.2rem; }
+      .layer-item { gap: 1rem; padding: 1.4rem 0; }
+      .layer-num { font-size: 2rem; min-width: 48px; }
+      .layer-info h3 { font-size: 1.2rem; }
+      .layer-info p { font-size: .82rem; }
+      .layer-dot { width: 10px; height: 10px; }
+
+      /* Stats */
+      #stats { padding: 4rem 1.2rem; }
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem 1rem;
+      }
+      .stat-num { font-size: clamp(2.8rem, 14vw, 4rem); }
+      .stat-label { font-size: .72rem; letter-spacing: .15em; }
+
+      /* Footer */
+      footer { padding: 2rem 1.2rem; }
+    }
+
+    @media (max-width: 400px) {
+      h1 { font-size: clamp(3.2rem, 24vw, 5rem); }
+      .sandwich-wrap svg { width: 200px; height: 137px; }
+    }
   </style>
 </head>
 <body>
@@ -344,7 +464,7 @@
   <div class="noise"></div>
   <p class="hero-tag">Шедевр кулинарии · Since 1947</p>
 
-  <h1>THE<br>SANDWICH</h1>
+  <h1 aria-label="The Sandwich">THE<br>SANDWICH</h1>
 
   <!-- SVG Sandwich -->
   <div class="sandwich-wrap" id="sandwichSvg" title="Нажми на меня">
@@ -420,7 +540,7 @@
 <!-- FEATURES -->
 <section id="features">
   <p class="section-label">Почему он лучший</p>
-  <h2 class="section-title">Три причины<br>влюбиться</h2>
+  <h2 class="section-title">Три причины<br>влюбиться в бутерброд</h2>
   <div class="cards">
     <div class="card">
       <div class="card-icon">🥖</div>
@@ -454,7 +574,7 @@
       <div class="layer-item">
         <span class="layer-num">01</span>
         <div class="layer-info">
-          <h4>Верхняя булка</h4>
+          <h3>Верхняя булка</h3>
           <p>Мягкая, с лёгким золотым поджаром. Основа всего.</p>
         </div>
         <div class="layer-dot" style="background:#f0aa60;"></div>
@@ -462,7 +582,7 @@
       <div class="layer-item">
         <span class="layer-num">02</span>
         <div class="layer-info">
-          <h4>Листья салата</h4>
+          <h3>Листья салата</h3>
           <p>Хрустящие, свежие — контрастируют с теплом колбасы.</p>
         </div>
         <div class="layer-dot" style="background:#5a9c3c;"></div>
@@ -470,7 +590,7 @@
       <div class="layer-item">
         <span class="layer-num">03</span>
         <div class="layer-info">
-          <h4>Колбаса докторская</h4>
+          <h3>Колбаса докторская</h3>
           <p>Три толстых ломтя. Щедрость — это не опция, это стандарт.</p>
         </div>
         <div class="layer-dot" style="background:#a52020;"></div>
@@ -478,7 +598,7 @@
       <div class="layer-item">
         <span class="layer-num">04</span>
         <div class="layer-info">
-          <h4>Сыр полутвёрдый</h4>
+          <h3>Сыр полутвёрдый</h3>
           <p>Укладывается прямо на тёплую колбасу — начинает плавиться.</p>
         </div>
         <div class="layer-dot" style="background:#f4c430;"></div>
@@ -486,7 +606,7 @@
       <div class="layer-item">
         <span class="layer-num">05</span>
         <div class="layer-info">
-          <h4>Нижняя булка</h4>
+          <h3>Нижняя булка</h3>
           <p>Фундамент. Удерживает всё вместе. Несёт ответственность.</p>
         </div>
         <div class="layer-dot" style="background:#c87941;"></div>
@@ -523,12 +643,17 @@
 </footer>
 
 <script>
-  // Custom cursor
+  // Custom cursor (desktop only)
   const cursor = document.getElementById('cursor');
-  document.addEventListener('mousemove', e => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top  = e.clientY + 'px';
-  });
+  const isTouchDevice = window.matchMedia('(hover: none)').matches;
+  if (isTouchDevice) {
+    cursor.style.display = 'none';
+  } else {
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top  = e.clientY + 'px';
+    });
+  }
   document.querySelectorAll('a, button, .card, .cta-btn, .sandwich-wrap').forEach(el => {
     el.addEventListener('mouseenter', () => cursor.classList.add('active'));
     el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
