@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- background -->
+  <rect width="32" height="32" rx="6" fill="#0d0d0d"/>
+  <!-- bun top -->
+  <ellipse cx="16" cy="7" rx="12" ry="5" fill="#e0944e"/>
+  <ellipse cx="16" cy="5.5" rx="10" ry="3.5" fill="#f0aa60"/>
+  <!-- sesame dots -->
+  <ellipse cx="12" cy="4.5" rx="1.2" ry=".6" fill="#f5c990" transform="rotate(-15 12 4.5)"/>
+  <ellipse cx="16" cy="3.5" rx="1.2" ry=".6" fill="#f5c990"/>
+  <ellipse cx="20" cy="4.5" rx="1.2" ry=".6" fill="#f5c990" transform="rotate(15 20 4.5)"/>
+  <!-- lettuce -->
+  <path d="M4 13 Q10 10 16 12 Q22 10 28 13 Q22 15.5 16 14 Q10 15.5 4 13Z" fill="#5a9c3c"/>
+  <!-- sausage -->
+  <rect x="4" y="15" width="24" height="6" rx="2" fill="#a52020"/>
+  <rect x="4" y="15" width="24" height="3" rx="2" fill="#c43030"/>
+  <!-- cheese -->
+  <path d="M3 22.5 L5 24.5 L27 24.5 L29 22.5 L27 21.5 L5 21.5Z" fill="#ffd60a"/>
+  <!-- bun bottom -->
+  <ellipse cx="16" cy="28" rx="12" ry="4" fill="#c87941"/>
+  <ellipse cx="16" cy="26.5" rx="11.5" ry="3" fill="#d98848"/>
+</svg>
